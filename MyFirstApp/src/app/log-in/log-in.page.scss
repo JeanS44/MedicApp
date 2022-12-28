@@ -1,11 +1,13 @@
+// This will remove iOS Header Line
+
 ion-content {
-    --background: #e0dfe6;
+    --background: linear-gradient(90deg, rgb(180, 35, 125) 0%, rgb(204, 29, 67) 100%);
 
     #header {
-        height: 33%;
+        height: 50%;
         border-radius: 0 0 20px 20px;
         display: flex;
-        background: #701d96;
+        background: linear-gradient(90deg, rgb(204, 29, 67) 0%, rgb(180, 35, 125) 100%);
         flex-direction: column;
         color: #fff;
         padding: 20px;
@@ -26,26 +28,20 @@ ion-content {
             }
         }
 
-        #logo {
-            width: 70px;
-            height: 70px;
-            background-color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 10px;
-            align-self: center;
+        h1 {
+            text-align: center;
+            margin-top: 0;
+        }
 
-            img {
-                width: 70%;
-            }
+        p {
+            text-align: justify;
+            margin-top: 0;
         }
     }
 
-
     .wrapper {
         position: absolute;
-        top: 27%;
+        top: 22%;
         left: 4%;
         right: 4%;
 
@@ -62,7 +58,7 @@ ion-content {
                 --padding-top: 0;
                 --min-height: 40px;
                 margin-bottom: 15px;
-                border-radius: 5px;
+                border-radius: 10px;
             }
 
             ion-icon {
@@ -70,7 +66,6 @@ ion-content {
             }
 
             ion-input {
-                margin-left: 10px;
                 font-size: 14px;
             }
         }
@@ -78,5 +73,52 @@ ion-content {
         ion-button {
             margin-top: 25px;
         }
+    }
+
+    // Removing Android Header Line
+    .header-md::after {
+        background: none !important;
+    }
+
+    .backbtn {
+        font-size: 23px;
+        margin-left: 20px;
+    }
+
+    .form-container {
+        margin-top: 48px;
+    }
+
+    .form-container ion-item {
+        --padding-start: 0;
+        --border-color: #DADADA;
+    }
+
+    .form-container ion-item ion-label {
+        color: #A6A6A6;
+    }
+
+    .form-container ion-item ion-icon {
+        margin-top: auto;
+        color: #c6cbd4;
+    }
+
+    .form-container ion-button {
+        margin-top: 20px;
+    }
+
+    .sign-up {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sign-up ion-button {
+        margin: 0;
+    }
+
+    .btnS {
+        text-decoration: underline;
+        color: rgb(204, 29, 67);
     }
 }

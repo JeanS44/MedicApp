@@ -1,5 +1,5 @@
 {
-  "name": "MyFirstApp",
+  "name": "myFirstApp",
   "integrations": {
     "capacitor": {}
   },

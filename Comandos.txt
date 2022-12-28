@@ -1,0 +1,4 @@
+----- Inicializar un nuevo proyecto en Ionic -----
+ionic start *nombre del proyecto* *blank - proyecto en blanco*
+----- Crear páginas nuevas en Ionic -----
+ionic generate page *nombre de la página*

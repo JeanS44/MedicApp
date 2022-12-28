@@ -1,5 +1,5 @@
 {
-  "name": "MyFirstApp",
+  "name": "myFirstApp",
   "version": "0.0.1",
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
@@ -26,9 +26,10 @@
     "@capacitor/keyboard": "4.1.0",
     "@capacitor/status-bar": "4.1.1",
     "@ionic/angular": "^6.1.9",
-    "angularfire2": "^5.4.2",
+    "add": "^2.0.6",
     "firebase": "^9.15.0",
     "ionicons": "^6.0.3",
+    "ng": "^0.0.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
