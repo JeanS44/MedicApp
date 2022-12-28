@@ -2,3 +2,11 @@
 ionic start *nombre del proyecto* *blank - proyecto en blanco*
 ----- Crear páginas nuevas en Ionic -----
 ionic generate page *nombre de la página*
+
+***** Para exportar a android *****
+----- Generar carpeta WWW -----
+-npm run ng run app:build
+----- Generar carpeta Android -----
+ionic capacitor build android
+----- Abrir proyecto en Android Studio -----
+npx capacitor open android
