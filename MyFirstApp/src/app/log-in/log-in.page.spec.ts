@@ -4,21 +4,21 @@ import { IonicModule } from '@ionic/angular';
 import { LogInPage } from './log-in.page';
 
 describe('LogInPage', () => {
-  let component: LogInPage;
-  let fixture: ComponentFixture<LogInPage>;
+    let component: LogInPage;
+    let fixture: ComponentFixture<LogInPage>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      declarations: [ LogInPage ],
-      imports: [IonicModule.forRoot()]
-    }).compileComponents();
+    beforeEach(waitForAsync(() => {
+        TestBed.configureTestingModule({
+            declarations: [LogInPage],
+            imports: [IonicModule.forRoot()]
+        }).compileComponents();
 
-    fixture = TestBed.createComponent(LogInPage);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  }));
+        fixture = TestBed.createComponent(LogInPage);
+        component = fixture.componentInstance;
+        fixture.detectChanges();
+    }));
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+    it('should create', () => {
+        expect(component).toBeTruthy();
+    });
 });

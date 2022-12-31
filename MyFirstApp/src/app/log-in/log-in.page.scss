@@ -1,13 +1,13 @@
 // This will remove iOS Header Line
 
 ion-content {
-    --background: linear-gradient(90deg, rgb(180, 35, 125) 0%, rgb(204, 29, 67) 100%);
+    --background: rgb(2, 0, 36);
+    --background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(210, 7, 161, 0.5858718487394958) 0%, rgba(162, 11, 36, 1) 100%);
 
     #header {
         height: 50%;
         border-radius: 0 0 20px 20px;
         display: flex;
-        background: linear-gradient(90deg, rgb(204, 29, 67) 0%, rgb(180, 35, 125) 100%);
         flex-direction: column;
         color: #fff;
         padding: 20px;

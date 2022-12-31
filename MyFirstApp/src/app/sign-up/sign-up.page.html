@@ -9,7 +9,7 @@
     <div class="wrapper">
         <div class="form-container">
             <ion-card class="form-wrapper">
-                <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+                <form [formGroup]="formularioRegistro" (ngSubmit)="onSubmit()">
                     <ion-item>
                         <ion-label position="floating">Nombre</ion-label>
                         <ion-input type="text" formControlName="name"></ion-input>
@@ -20,8 +20,8 @@
                     </ion-item>
                     <ion-item>
                         <ion-label position="floating">Contraseña</ion-label>
-                        <ion-input type="password" formControlName="password"></ion-input>
-                        <ion-icon name="eye" slot="end"></ion-icon>
+                        <ion-input #input type="password" formControlName="password"></ion-input>
+                        <ion-icon (click)="showPassword(input)" name="eye" slot="end"></ion-icon>
                     </ion-item>
                     <ion-button type="submit" value="Enviar" expand="block"
                         class="main-button">Registrarse!</ion-button>
