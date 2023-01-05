@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Firestore } from '@angular/fire/firestore';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ToastController } from '@ionic/angular';
 import { AutenticacionService } from '../servicios/autenticacion.service';
 
 @Component({
@@ -15,6 +16,7 @@ export class LogInPage implements OnInit {
 
     constructor(private Firestore: Firestore,
         private autenticacionService: AutenticacionService,
+        public toastController: ToastController,
         private router: Router) {
         this.formularioEntrar = new FormGroup({
             email: new FormControl(),
@@ -32,8 +34,21 @@ export class LogInPage implements OnInit {
                 error => { console.log(error, 'error') }
             );
         if (res) {
-            this.router.navigate(['/perfil-admin'])
+            const toast = this.toastController.create({
+                message: 'Usuario correcto, redireccionando...',
+                position: 'bottom',
+                duration: 2000
+            });
+            (await toast).present()
+            this.router.navigate(['/splash-screen'])
             console.log('exito->', res);
+        } else {
+            const toast = this.toastController.create({
+                message: 'Usuario incorrecto, porfavor intente nuevamente.',
+                position: 'bottom',
+                duration: 2000
+            });
+            (await toast).present()
         }
     }
 

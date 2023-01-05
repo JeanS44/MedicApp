@@ -16,8 +16,9 @@ export class AutenticacionService {
 		private router: Router) { }
 
 	addUser(User: User) {
-		const UserRef = collection(this.firestore, 'usuarios');
-		return addDoc(UserRef, User);
+		/* const UserRef = collection(this.firestore, 'usuarios');
+		return addDoc(UserRef, User); */
+		return this.authFireAuth.createUserWithEmailAndPassword(User.userEmail, User.firstPassword);
 	}
 
 	getUsers(): Observable<User[]> {
@@ -26,7 +27,7 @@ export class AutenticacionService {
 	}
 
 	deleteUser(User: User) {
-		const UserDocRef = doc(this.firestore, `Users/${User.id}`);
+		const UserDocRef = doc(this.firestore, `Users/${User.uid}`);
 		return deleteDoc(UserDocRef);
 	}
 

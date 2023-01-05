@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/compat/auth'
 import { Platform } from '@ionic/angular';
 
@@ -10,8 +9,7 @@ import { Platform } from '@ionic/angular';
 })
 export class SplashScreenPage implements OnInit {
 
-    constructor(public router: Router,
-        private angularFireAuth: AngularFireAuth,
+    constructor(private angularFireAuth: AngularFireAuth,
         private platform: Platform) {
         setTimeout(() => {
             this.platform.ready().then(() => {
@@ -25,7 +23,7 @@ export class SplashScreenPage implements OnInit {
                     }
                 });
             });
-        }, 5000);
+        }, 2500);
     }
 
     ngOnInit() {

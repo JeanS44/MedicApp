@@ -9,27 +9,82 @@
     <div class="wrapper">
         <div class="form-container">
             <ion-card class="form-wrapper">
-                <form [formGroup]="formularioRegistro" (ngSubmit)="onSubmit()">
-                    <ion-item>
-                        <ion-label position="floating">Nombre</ion-label>
-                        <ion-input type="text" formControlName="name"></ion-input>
-                    </ion-item>
-                    <ion-item>
-                        <ion-label position="floating">Correo</ion-label>
-                        <ion-input type="email" formControlName="email"></ion-input>
-                    </ion-item>
-                    <ion-item>
-                        <ion-label position="floating">Contraseña</ion-label>
-                        <ion-input #input type="password" formControlName="password"></ion-input>
-                        <ion-icon (click)="showPassword(input)" name="eye" slot="end"></ion-icon>
-                    </ion-item>
-                    <ion-button type="submit" value="Enviar" expand="block"
-                        class="main-button">Registrarse!</ion-button>
+                <form [formGroup]="formularioRegistro" (ngSubmit)="registerUserOnFirestore()">
+                    <ion-row>
+                        <ion-col>
+                            <ion-item>
+                                <ion-label position="floating">Rut (Sin guión)</ion-label>
+                                <ion-input type="text" formControlName="rut"></ion-input>
+                            </ion-item>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col>
+                            <ion-item>
+                                <ion-label position="floating">Primer nombre</ion-label>
+                                <ion-input type="text" formControlName="firstName"></ion-input>
+                            </ion-item>
+                        </ion-col>
+                        <ion-col>
+                            <ion-item>
+                                <ion-label position="floating">Segundo nombre</ion-label>
+                                <ion-input type="text" formControlName="secondName"></ion-input>
+                            </ion-item>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col>
+                            <ion-item>
+                                <ion-label position="floating">Primer apellido</ion-label>
+                                <ion-input type="text" formControlName="firstApellido"></ion-input>
+                            </ion-item>
+                        </ion-col>
+                        <ion-col>
+                            <ion-item>
+                                <ion-label position="floating">Segundo apellido</ion-label>
+                                <ion-input type="text" formControlName="secondApellido"></ion-input>
+                            </ion-item>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col>
+                            <ion-item>
+                                <ion-label position="floating">Correo</ion-label>
+                                <ion-input type="email" formControlName="userEmail"></ion-input>
+                            </ion-item>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col>
+                            <ion-item>
+                                <ion-label position="floating">Contraseña</ion-label>
+                                <ion-input #input0 type="password" formControlName="firstPassword"></ion-input>
+                                <ion-icon (click)="showPassword(input0)" name="eye" slot="end"></ion-icon>
+                            </ion-item>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col>
+                            <ion-item>
+                                <ion-label position="floating">Contraseña</ion-label>
+                                <ion-input #input1 type="password" formControlName="secondPassword"></ion-input>
+                                <ion-icon (click)="showPassword(input1)" name="eye" slot="end"></ion-icon>
+                            </ion-item>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col>
+                            <ion-button type="submit" value="Enviar" expand="block" class="main-button">
+                                Registrarse!
+                            </ion-button>
+                        </ion-col>
+                    </ion-row>
                 </form>
                 <div class="sign-up">
                     ¿Ya tienes una cuenta?
-                    <ion-button class="btnS" fill="clear" routerLink="/log-in"
-                        routerDirection="forward">¡Entra!</ion-button>
+                    <ion-button class="btnS" fill="clear" routerLink="/log-in" routerDirection="forward">
+                        ¡Entra!
+                    </ion-button>
                 </div>
             </ion-card>
         </div>
